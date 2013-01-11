@@ -23,7 +23,7 @@ import org.usfirst.frc3507.commands.ExampleCommand;
  */
 public class CommandBasedRobot extends IterativeRobot {
 
-    Command autonomousCommand;
+    //Command autonomousCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -31,7 +31,7 @@ public class CommandBasedRobot extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
+//        autonomousCommand = new ExampleCommand();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -39,7 +39,7 @@ public class CommandBasedRobot extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-        autonomousCommand.start();
+      //  autonomousCommand.start();
     }
 
     /**
@@ -54,7 +54,7 @@ public class CommandBasedRobot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to 
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
-		autonomousCommand.cancel();
+		// autonomousCommand.cancel();
     }
 
     /**

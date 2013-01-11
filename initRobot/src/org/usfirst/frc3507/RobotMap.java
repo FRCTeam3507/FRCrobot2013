@@ -7,13 +7,63 @@ package org.usfirst.frc3507;
  * floating around.
  */
 public class RobotMap {
-    // For example to map the left and right motors, you could define the
-    // following variables to use with your drivetrain subsystem.
-    // public static final int leftMotor = 1;
-    // public static final int rightMotor = 2;
+    // Motors: This is the mapping of motors ports marked PWM on the DIO board
+    public static final int
+            shooterSlot = 1, 
+            wheelSetSlot = 1,
+            motorSetSlot = 1;
+
+    // Shooter Map
+    public static final int
+            shooterLChannel = 5,
+            shooterRChannel = 6,
+            autoTopButton = 1,
+            autoMiddleButton = 2,
+            shooterSpeedJoy = 4,
+            shooterAimJoy = 1,
+            autoShooterSpeedToggle = 2,
+            lowerShooter = 3,
+            raiseShooter = 5,
+            shooterElevatorChannel = 3,
+            shooterLowerLimit = 9,
+            shooterUpperLimit = 10,
+            shooterEncoder1 = 1,
+            shooterEncoder2 = 2;
     
-    // If you are using multiple modules, make sure to define both the port
-    // number and the module. For example you with a rangefinder:
-    // public static final int rangefinderPort = 1;
-    // public static final int rangefinderModule = 1;
+    // Conveyor Map
+    public static final int
+            conveyorChannel = 7,
+            conveyorJoy = 3,
+            conveyorDirectionToggle = 8,
+            conveyorStatusToggle = 9,
+            rollerChannel = 4,
+            conveyorSlot = 1; 
+    
+    // Bridge lowerer map
+    public static final int
+            bridgeRelayChannel = 2,
+            bridgeSlot = 1,
+            bridgeJoy = 2,
+            bridgeActivateButton = 1,
+            bridgeToggleModeButton = 6,
+            bridgeRaiseButton = 3,
+            bridgeLowerButton = 2,
+            bridgeLowerLimit = 5,
+            bridgeUpperLimit = 6;
+    
+    public static final int[]
+            wheelSetChannel = new int[]{1,2,3,4};
+    /*
+     * wheel numbers
+     *
+     * front (conveyor)
+     * 1 | 2
+     * - + -
+     * 3 | 4
+     * back (bridge lowerer)
+     *
+     */
+     public static final double
+             wheelSpeedEdit = 1.0;
+
 }
