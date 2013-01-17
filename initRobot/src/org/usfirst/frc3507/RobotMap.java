@@ -53,6 +53,10 @@ public class RobotMap {
     
     public static final int[]
             wheelSetChannel = new int[]{1,2,3,4};
+    
+    public static final int
+    	CameraTestingButton = 2,
+    	CameraTestingController = 2;
     /*
      * wheel numbers
      *

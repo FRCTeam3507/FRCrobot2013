@@ -29,8 +29,11 @@ public abstract class CommandBase extends Command {
 
     
     public static SetWheelSpeed staticWheel = new SetWheelSpeed(0);    
+    
+    public static ImageProcessor ImgPro = new ImageProcessor();
+    public static AutonomousAim AA = new AutonomousAim();
    
-
+    public static AxisCamera cam;
     
     /**
      * Call this command to properly finish initializing the CommandBase.
@@ -40,6 +43,14 @@ public abstract class CommandBase extends Command {
         
         oi = new OI();
         
+        cam = AxisCamera.getInstance();
+        //cam = AxisCamera.getInstance("10.35.7.2");/
+        cam.writeResolution(AxisCamera.ResolutionT.k320x240);
+        cam.writeBrightness(60);
+        cam.writeCompression(0);
+        cam.writeRotation(AxisCamera.RotationT.k0);
+        cam.writeExposureControl(AxisCamera.ExposureT.hold);
+        cam.writeWhiteBalance(AxisCamera.WhiteBalanceT.fixedOutdoor2);
 
     }
     
