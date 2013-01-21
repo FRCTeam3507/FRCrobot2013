@@ -4,8 +4,6 @@ package org.usfirst.frc3507.commands;
  * and open the template in the editor.
  */
 
-import edu.wpi.first.wpilibj.camera.AxisCameraException;
-import edu.wpi.first.wpilibj.image.NIVisionException;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc3507.RobotMap;
 

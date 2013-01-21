@@ -32,6 +32,11 @@ public abstract class CommandBase extends Command {
     
     public static ImageProcessor ImgPro = new ImageProcessor();
     public static AutonomousAim AA = new AutonomousAim();
+    
+    public static SolenoidControl SC1 = new SolenoidControl(RobotMap.pneumaticSlot,RobotMap.pneumaticChannel1);
+    public static SolenoidControl SC2 = new SolenoidControl(RobotMap.pneumaticSlot,RobotMap.pneumaticChannel2);
+    
+    public static SetSolenoidState SSS = new SetSolenoidState();
    
     public static AxisCamera cam;
     

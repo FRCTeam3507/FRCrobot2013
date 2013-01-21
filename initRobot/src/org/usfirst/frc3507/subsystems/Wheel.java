@@ -6,7 +6,6 @@ package org.usfirst.frc3507.subsystems;
  */
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc3507.commands.SetWheelSpeed;
 import org.usfirst.frc3507.commands.CommandBase;
 //import edu.wpi.first.wpilibj.templates.RobotMap;
 

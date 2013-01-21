@@ -8,7 +8,7 @@ package org.usfirst.frc3507;
  */
 public class RobotMap {
     // Motors: This is the mapping of motors ports marked PWM on the DIO board
-    public static final int
+    /*public static final int
             shooterSlot = 1, 
             wheelSetSlot = 1,
             motorSetSlot = 1;
@@ -49,14 +49,28 @@ public class RobotMap {
             bridgeRaiseButton = 3,
             bridgeLowerButton = 2,
             bridgeLowerLimit = 5,
-            bridgeUpperLimit = 6;
+            bridgeUpperLimit = 6;*/
     
     public static final int[]
             wheelSetChannel = new int[]{1,2,3,4};
     
     public static final int
+    // slots
+    	wheelSetSlot = 1,
+    	pneumaticSlot = 2,
+    	
+    //channels
+    	pneumaticChannel1 = 1,
+    	pneumaticChannel2 = 2,
+    	
+    //buttons
     	CameraTestingButton = 2,
-    	CameraTestingController = 2;
+    	pneumaticButton1 = 4,
+    	pneumaticButton2 = 5,
+    
+    //controller numbers
+    	CameraTestingController = 2,
+    	pneumaticController = 2;
     /*
      * wheel numbers
      *

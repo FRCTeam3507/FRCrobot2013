@@ -3,7 +3,6 @@ package org.usfirst.frc3507.commands;
 import org.usfirst.frc3507.RobotMap;
 
 import edu.wpi.first.wpilibj.camera.AxisCameraException;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.image.BinaryImage;
 import edu.wpi.first.wpilibj.image.ColorImage;
 import edu.wpi.first.wpilibj.image.CriteriaCollection;

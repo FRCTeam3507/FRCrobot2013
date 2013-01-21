@@ -9,10 +9,8 @@ package org.usfirst.frc3507;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import org.usfirst.frc3507.commands.CommandBase;
-import org.usfirst.frc3507.commands.ExampleCommand;
 
 /**
  * The VM is configured to automatically run this class, and to call the

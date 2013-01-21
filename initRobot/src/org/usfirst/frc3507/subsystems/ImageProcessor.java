@@ -1,6 +1,5 @@
 package org.usfirst.frc3507.subsystems;
 
-import org.usfirst.frc3507.commands.AutonomousAim;
 import org.usfirst.frc3507.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
