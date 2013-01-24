@@ -40,6 +40,11 @@ public abstract class CommandBase extends Command {
    
     public static AxisCamera cam;
     
+    public static ShooterWheels sh1= new ShooterWheels();
+    public static SetShooterSpeed setShooterSpeed = new SetShooterSpeed();
+    
+    
+    
     /**
      * Call this command to properly finish initializing the CommandBase.
      * This call is automatically included in the default template.
