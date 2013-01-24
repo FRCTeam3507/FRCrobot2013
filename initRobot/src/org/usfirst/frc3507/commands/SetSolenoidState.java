@@ -17,7 +17,9 @@ public class SetSolenoidState extends CommandBase {
 		// TODO Auto-generated method stub
 		SC1.setState(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton1));
 		SC2.setState(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton2));
+
 	}
+
 
 	protected void initialize() {
 		// TODO Auto-generated method stub

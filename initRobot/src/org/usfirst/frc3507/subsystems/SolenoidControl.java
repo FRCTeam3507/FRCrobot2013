@@ -10,6 +10,7 @@ public class SolenoidControl extends Subsystem {
 	Solenoid solenoid;
 	
 	public SolenoidControl(int slot, int channel){
+		super("Solenoid things");
 		solenoid = new Solenoid(slot,channel);
 	}
 	
@@ -19,7 +20,10 @@ public class SolenoidControl extends Subsystem {
 	}
 	
 	public void setState(boolean on){
-		solenoid.set(on);
+		if(solenoid.get() != on){
+			System.out.println("asdfasdfasdffasdfsddsd");
+			solenoid.set(on);
+		}
 	}
 
 }

@@ -3,6 +3,7 @@ package org.usfirst.frc3507.commands;
 import org.usfirst.frc3507.RobotMap;
 
 import com.sun.cldc.jna.Pointer;
+import com.sun.squawk.Address;
 
 import edu.wpi.first.wpilibj.camera.AxisCameraException;
 import edu.wpi.first.wpilibj.image.BinaryImage;
@@ -12,7 +13,10 @@ import edu.wpi.first.wpilibj.image.NIVision;
 import edu.wpi.first.wpilibj.image.NIVision.MeasurementType;
 import edu.wpi.first.wpilibj.image.NIVisionException;
 import edu.wpi.first.wpilibj.image.ParticleAnalysisReport;
+import edu.wpi.first.wpilibj.image.RGBImage;
+
 import java.lang.Integer;
+import com.sun.squawk.VM;
 
 public class AutonomousAim extends CommandBase {
 
@@ -44,15 +48,26 @@ public class AutonomousAim extends CommandBase {
         	
         	ColorImage img = CommandBase.cam.getImage();
         	//BinaryImage img = img2.thresholdRGB(100, 255, 100, 255, 100, 255); 
-        	Pointer po = img.image.align(0);
+        	String loc = "image"+System.currentTimeMillis()+".png";
+        	img.write(loc);
+        	RGBImage rgbi = new RGBImage(loc);
+        	Pointer po = rgbi.image;
+        	//Pointer po = img.image.align(0);
+        	Address ad = po.address();
+        	System.out.println(po.getSize());
+        	System.out.println(po.align(0).getSize());
+        	
         	
         	//System.out.println(img.image.getSize());
         	//System.out.println(img.getWidth());
         	//System.out.println(img.image);
-        	System.out.println(po.getSize()/24);
+        	//System.out.println(po.getSize()/24);
         	
-        	int[] ints = new int[po.getSize()/24];
-        	img.image.getInts(0, ints, 0, (po.getSize()/24)-100);
+        	int[] ints = new int[img.getWidth()*img.getHeight()];
+        	VM.getData(ad, 0, ints, 0, ints.length, 4);
+        	//po.getInts(0, ints, 0, 100);
+        	
+        	//po.free();
         	
         	
 
@@ -66,15 +81,15 @@ public class AutonomousAim extends CommandBase {
         		
         		int test = (((ints[i]>>16)&0xff) + ((ints[i]>>8)&0xff) + ((ints[i])&0xff))/3;
         		if(test <=  51)
-        			System.out.print("\u2588");
+        			System.out.print("5");
         		else if(test <=  102)
-        			System.out.print("\u2593");
+        			System.out.print("4");
         		else if(test <=  153)
-        			System.out.print("\u2592");
+        			System.out.print("3");
         		else if(test <=  204)
-        			System.out.print("\u2591");
+        			System.out.print("2");
         		else
-        			System.out.print("_");
+        			System.out.print("1");
         		
         		if((i+1)%img.getWidth() == 0)System.out.println();
         	}

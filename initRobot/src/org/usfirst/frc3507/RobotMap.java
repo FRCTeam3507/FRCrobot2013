@@ -57,11 +57,17 @@ public class RobotMap {
     public static final int
     // slots
     	wheelSetSlot = 1,
-    	pneumaticSlot = 2,
+    	pneumaticSlot = 1,
+    	HookMotorSlot = 1,
+    	HookLimitSlot = 1,
     	
     //channels
     	pneumaticChannel1 = 1,
     	pneumaticChannel2 = 2,
+    	Hook1MotorChannel = 7,
+    	Hook2MotorChannel = 8,
+    	Hook1LimitChannel = 1,
+    	Hook2LimitChannel = 2,
     	
     //buttons
     	CameraTestingButton = 2,
@@ -70,6 +76,7 @@ public class RobotMap {
     
     //controller numbers
     	CameraTestingController = 2,
+    	HookController = 4,
     	pneumaticController = 2;
     /*
      * wheel numbers
