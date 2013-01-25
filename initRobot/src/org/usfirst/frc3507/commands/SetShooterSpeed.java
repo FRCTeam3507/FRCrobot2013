@@ -24,7 +24,7 @@ public class SetShooterSpeed extends CommandBase {
 		else {
 			
 			sh1.shooter.set(Relay.Value.kOff);
-			sh1.shooter2.set(Relay.Value.kForward);
+			sh1.shooter2.set(Relay.Value.kOff);
 			
 		}
 
