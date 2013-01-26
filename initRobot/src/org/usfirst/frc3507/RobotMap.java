@@ -7,7 +7,7 @@ package org.usfirst.frc3507;
  * floating around.
  */
 public class RobotMap {
-    // Motors: This is the mapping of motors ports marked PWM on the DIO board
+    // Motors: This is the mapping of motors ports marked PWM on the DIO board bacony
     /*public static final int
             shooterSlot = 1, 
             wheelSetSlot = 1,
