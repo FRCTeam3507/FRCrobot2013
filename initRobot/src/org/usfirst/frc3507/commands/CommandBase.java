@@ -42,6 +42,9 @@ public abstract class CommandBase extends Command {
     
     public static HookMotors hookMotors = new HookMotors();
     public static SetHookSpeed setHookSpeed = new SetHookSpeed();
+    public static ShooterWheels sh1= new ShooterWheels();
+    public static SetShooterSpeed setShooterSpeed = new SetShooterSpeed();
+
     
     /**
      * Call this command to properly finish initializing the CommandBase.

@@ -77,7 +77,11 @@ public class RobotMap {
     //controller numbers
     	CameraTestingController = 2,
     	HookController = 4,
-    	pneumaticController = 2;
+    	pneumaticController = 2,
+    	
+    //Shooter Spike/Relay on joystick button
+    	shooterJoystick = 1,
+    	shooterButton = 4;
     /*
      * wheel numbers
      *
