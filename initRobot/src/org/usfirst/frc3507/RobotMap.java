@@ -80,7 +80,7 @@ public class RobotMap {
     	pneumaticController = 2,
     	
     //Shooter Spike/Relay on joystick button
-    	shooterJoystick = 1,
+    	shooterJoystick = 3,
     	shooterButton = 4;
     /*
      * wheel numbers

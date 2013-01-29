@@ -1,5 +1,6 @@
 package org.usfirst.frc3507.subsystems;
 
+import org.usfirst.frc3507.RobotMap;
 import org.usfirst.frc3507.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.Solenoid;
@@ -7,11 +8,14 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class SolenoidControl extends Subsystem {
 
-	Solenoid solenoid;
+	Solenoid solenoidA;
+	Solenoid solenoidB;
+
 	
-	public SolenoidControl(int slot, int channel){
+	public SolenoidControl(){
 		super("Solenoid things");
-		solenoid = new Solenoid(slot,channel);
+		solenoidA = new Solenoid(RobotMap.pneumaticSlot,RobotMap.pneumaticChannel1);
+		solenoidB = new Solenoid(RobotMap.pneumaticSlot,RobotMap.pneumaticChannel2);
 	}
 	
 	protected void initDefaultCommand() {
@@ -19,10 +23,15 @@ public class SolenoidControl extends Subsystem {
 		setDefaultCommand(CommandBase.SSS);
 	}
 	
-	public void setState(boolean on){
-		if(solenoid.get() != on){
-			System.out.println("asdfasdfasdffasdfsddsd");
-			solenoid.set(on);
+	public void setStateA(boolean on){
+		if(solenoidA.get() != on){
+			solenoidA.set(on);
+		}
+	}
+	
+	public void setStateB(boolean on){
+		if(solenoidB.get() != on){
+			solenoidB.set(on);
 		}
 	}
 

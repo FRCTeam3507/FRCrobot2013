@@ -5,8 +5,7 @@ import org.usfirst.frc3507.RobotMap;
 public class SetSolenoidState extends CommandBase {
 	
 	public SetSolenoidState(){
-		requires(SC1);
-		requires(SC2);
+		requires(SC);
 	}
 
 	protected void end() {
@@ -15,8 +14,8 @@ public class SetSolenoidState extends CommandBase {
 
 	protected void execute() {
 		// TODO Auto-generated method stub
-		SC1.setState(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton1));
-		SC2.setState(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton2));
+		SC.setStateA(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton1));
+		SC.setStateB(oi.getButton(RobotMap.pneumaticController, RobotMap.pneumaticButton2));
 
 	}
 
