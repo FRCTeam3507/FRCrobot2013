@@ -24,10 +24,10 @@ public class AutonomousAim extends CommandBase {
     public AutonomousAim() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(wheelSet[0]);
-        requires(wheelSet[1]);
-        requires(wheelSet[2]);
-        requires(wheelSet[3]);
+        //requires(wheelSet[0]);
+        //requires(wheelSet[1]);
+        //requires(wheelSet[2]);
+        //requires(wheelSet[3]);
         requires(ImgPro);
     }
 
@@ -38,7 +38,7 @@ public class AutonomousAim extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     public int weAreHere = 0;
     protected void execute() {
-    	if(weAreHere++ > 1000){
+    	/*if(weAreHere++ > 1000){
     		System.out.print("WeAreHere");
     		weAreHere = 0;
     	}
@@ -171,12 +171,12 @@ public class AutonomousAim extends CommandBase {
                         System.out.print(" ");
                 }
                 System.out.println();
-            }*/
+            }
         } catch (AxisCameraException ex) {
         	System.out.println("ERROR HERE");
         } catch (NIVisionException ex) {
         	System.out.println("ERROR THERE");
-        }
+        }*/
     }
 
     // Make this return true when this Command no longer needs to run execute()

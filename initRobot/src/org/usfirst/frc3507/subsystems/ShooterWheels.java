@@ -12,6 +12,11 @@ public class ShooterWheels extends Subsystem {
 	public Relay shooter = new Relay(RobotMap.shooterSlot, RobotMap.shooter1RelayChannel);
 	public Relay shooter2= new Relay(RobotMap.shooterSlot, RobotMap.shooter2RelayChannel);
 	
+	public ShooterWheels(){
+		super("shooter wheels");
+	}
+		
+	
 	
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub

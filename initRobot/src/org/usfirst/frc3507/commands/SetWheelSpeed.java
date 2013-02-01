@@ -15,6 +15,7 @@ import org.usfirst.frc3507.RobotMap;
 public class SetWheelSpeed extends CommandBase {
     int ch;//location in the array
     public SetWheelSpeed(int i) {
+    	
      //   requires(wheelSet[i]);
         requires(wheelSet[0]);
         requires(wheelSet[1]);
@@ -31,6 +32,7 @@ public class SetWheelSpeed extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
         
         /*if (oi.getButton(RobotMap.shooterAimJoy, RobotMap.autoTopButton))
         {
@@ -59,17 +61,14 @@ public class SetWheelSpeed extends CommandBase {
         }
         else {*/
 
-            double X = 0;//.getXSpeed(1);
+            double X = oi.getXSpeed(1);
             double Y = oi.getYSpeed(1);
-            double rotation = -oi.getXSpeed(1);// was 2
+            double rotation = -oi.getXSpeed(2);
 
             X = scale(X);
             Y = scale(Y);
             rotation = scale(rotation);
 
-            SmartDashboard.putDouble("Joystick 1X", X);
-            SmartDashboard.putDouble("Joystick 1Y", Y);
-            SmartDashboard.putDouble("Joystick 2X", rotation);
 
 
             /*double[] speeds = new double[]{

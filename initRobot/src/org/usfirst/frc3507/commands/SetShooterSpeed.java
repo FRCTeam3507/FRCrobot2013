@@ -6,6 +6,10 @@ import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class SetShooterSpeed extends CommandBase {
+	
+	public SetShooterSpeed(){
+		requires(sh1);
+	}
 
 	
 	protected void end() {
