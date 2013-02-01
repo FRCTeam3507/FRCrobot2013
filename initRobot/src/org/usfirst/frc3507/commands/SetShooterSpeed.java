@@ -15,11 +15,21 @@ public class SetShooterSpeed extends CommandBase {
 
 	protected void execute() {
 		// TODO Auto-generated method stub
-		if(oi.getButton(RobotMap.shooterJoystick,RobotMap.shooterButton)){
+		if(oi.getButton(RobotMap.shooterJoystick,RobotMap.shootersForwardButton)){
 			
 			sh1.shooter.set(Relay.Value.kForward);
-			sh1.shooter2.set(Relay.Value.kForward);
+			sh1.shooter2.set(Relay.Value.kForward);			
+		}
+		else {
 			
+			sh1.shooter.set(Relay.Value.kOff);
+			sh1.shooter2.set(Relay.Value.kOff);
+			
+		}
+		if(oi.getButton(RobotMap.shooterJoystick,RobotMap.shootersReverseButton)){
+			
+			sh1.shooter.set(Relay.Value.kReverse);
+			sh1.shooter2.set(Relay.Value.kReverse);			
 		}
 		else {
 			

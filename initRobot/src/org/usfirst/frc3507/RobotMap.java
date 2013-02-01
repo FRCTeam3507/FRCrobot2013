@@ -81,7 +81,13 @@ public class RobotMap {
     	
     //Shooter Spike/Relay on joystick button
     	shooterJoystick = 3,
-    	shooterButton = 4;
+    	shootersForwardButton = 4,
+    	shootersReverseButton = 3,
+    	shooter1RelayChannel = 5,
+    	shooter2RelayChannel = 6,
+    	shooterSlot = 1;
+    	
+    	
     /*
      * wheel numbers
      *
