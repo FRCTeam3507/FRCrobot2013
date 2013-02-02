@@ -58,24 +58,28 @@ public class RobotMap {
     // slots
     	wheelSetSlot = 1,
     	pneumaticSlot = 1,
-    	HookMotorSlot = 1,
-    	HookLimitSlot = 1,
+    	hookMotorSlot = 1,
+    	hookLimitSlot = 1,
+    	comSwitchSlot = 1,
+    	compressorSlot = 0,
     	
     //channels
     	pneumaticChannel1 = 1,
     	pneumaticChannel2 = 2,
-    	Hook1MotorChannel = 7,
-    	Hook2MotorChannel = 8,
-    	Hook1LimitChannel = 1,
-    	Hook2LimitChannel = 2,
+    	hook1MotorChannel = 7,
+    	hook2MotorChannel = 8,
+    	hook1LimitChannel = 1,
+    	hook2LimitChannel = 2,
+    	comSwitchChannel = 7,
+    	compressorChannel = 8,
     	
     //buttons
-    	CameraTestingButton = 2,
+    	cameraTestingButton = 2,
     	pneumaticButton1 = 4,
     	pneumaticButton2 = 5,
     
     //controller numbers
-    	CameraTestingController = 2,
+    	cameraTestingController = 2,
     	HookController = 4,
     	pneumaticController = 2,
     	

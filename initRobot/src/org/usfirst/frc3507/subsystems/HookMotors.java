@@ -16,10 +16,10 @@ public class HookMotors extends Subsystem {
 	
 	public HookMotors(){
 		super("hook Motors");
-		motor1 = new Victor(RobotMap.HookMotorSlot, RobotMap.Hook1MotorChannel);
-		motor2 = new Victor(RobotMap.HookMotorSlot, RobotMap.Hook2MotorChannel);
-		Limit1 = new DigitalInput(RobotMap.HookLimitSlot, RobotMap.Hook1LimitChannel);
-		Limit2 = new DigitalInput(RobotMap.HookLimitSlot, RobotMap.Hook2LimitChannel);
+		motor1 = new Victor(RobotMap.hookMotorSlot, RobotMap.hook1MotorChannel);
+		motor2 = new Victor(RobotMap.hookMotorSlot, RobotMap.hook2MotorChannel);
+		Limit1 = new DigitalInput(RobotMap.hookLimitSlot, RobotMap.hook1LimitChannel);
+		Limit2 = new DigitalInput(RobotMap.hookLimitSlot, RobotMap.hook2LimitChannel);
 	}
 	
 	protected void initDefaultCommand() {

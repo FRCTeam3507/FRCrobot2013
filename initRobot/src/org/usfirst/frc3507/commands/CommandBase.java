@@ -37,6 +37,10 @@ public abstract class CommandBase extends Command {
     public static ShooterWheels sh1= new ShooterWheels();
     public static SetShooterSpeed setShooterSpeed = new SetShooterSpeed();
     
+    public static SetCompressorState scs = new SetCompressorState();
+    
+    public static ReloaderCompressor compressor = new ReloaderCompressor();
+    
     public static Wheel[] wheelSet = {new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[0],0),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[1],1),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[2],2),
