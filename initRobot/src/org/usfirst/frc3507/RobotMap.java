@@ -62,6 +62,7 @@ public class RobotMap {
     	hookLimitSlot = 1,
     	comSwitchSlot = 1,
     	compressorSlot = 0,
+    	shooterAngleSlot = 1,
     	
     //channels
     	pneumaticChannel1 = 1,
@@ -72,16 +73,20 @@ public class RobotMap {
     	hook2LimitChannel = 2,
     	comSwitchChannel = 7,
     	compressorChannel = 8,
-    	
+    	shooterAngleChannel1 = 9,
+    	shooterAngleChannel2 = 10,
     //buttons
     	cameraTestingButton = 2,
     	pneumaticButton1 = 4,
     	pneumaticButton2 = 5,
+    	shooterAngleButtonUp = 3,
+    	shooterAngleButtonDown = 2,
     
     //controller numbers
     	cameraTestingController = 2,
     	HookController = 4,
     	pneumaticController = 2,
+    	shooterAngleController = 3,
     	
     //Shooter Spike/Relay on joystick button
     	shooterJoystick = 3,
@@ -90,6 +95,9 @@ public class RobotMap {
     	shooter1RelayChannel = 5,
     	shooter2RelayChannel = 6,
     	shooterSlot = 1;
+    
+    //Shooter Angle Speed
+    public static double speed = .5;
     	
     	
     /*

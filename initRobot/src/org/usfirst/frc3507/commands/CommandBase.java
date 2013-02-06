@@ -40,7 +40,8 @@ public abstract class CommandBase extends Command {
     public static SetCompressorState scs = new SetCompressorState();
     
     public static ReloaderCompressor compressor = new ReloaderCompressor();
-    
+    public static ShooterAngler shooterAngler = new ShooterAngler();
+    public static ShooterAngleState shooterAnglerState = new ShooterAngleState();
     public static Wheel[] wheelSet = {new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[0],0),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[1],1),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[2],2),

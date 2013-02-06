@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/James/Desktop/eclipse/plugins/sunspotfrcsdk/lib/wpilibj.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/James/Desktop/eclipse/plugins/sunspotfrcsdk/lib/squawk.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/James/Desktop/eclipse/plugins/sunspotfrcsdk/lib/networktables-crio.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Eclipse/plugins/sunspotfrcsdk/lib/wpilibj.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Eclipse/plugins/sunspotfrcsdk/lib/squawk.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Eclipse/plugins/sunspotfrcsdk/lib/networktables-crio.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>
