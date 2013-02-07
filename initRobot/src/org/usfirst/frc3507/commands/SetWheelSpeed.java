@@ -62,33 +62,12 @@ public class SetWheelSpeed extends CommandBase {
         else {*/
 
             double X = oi.getXSpeed(1);
-            double Y = oi.getYSpeed(1);
-            double rotation = -oi.getXSpeed(2);
+            double Y = -oi.getYSpeed(1);
+            double rotation = oi.getXSpeed(2);
 
             X = scale(X);
             Y = scale(Y);
             rotation = scale(rotation);
-
-
-
-            /*double[] speeds = new double[]{
-                Y
-               +X
-               +rotation*RobotMap.wheelSpeedEdit
-                        ,
-                Y
-               -X
-               -rotation*RobotMap.wheelSpeedEdit
-                        ,
-               Y
-               -X
-               +rotation*RobotMap.wheelSpeedEdit
-                        ,
-               Y
-               +X
-               -rotation*RobotMap.wheelSpeedEdit
-
-            };*/
             
             double[] speeds = new double[]{
                 Y

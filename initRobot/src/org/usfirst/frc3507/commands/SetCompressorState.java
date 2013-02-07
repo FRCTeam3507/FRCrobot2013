@@ -15,7 +15,7 @@ public class SetCompressorState extends CommandBase {
 
 	protected void execute() {
 		// TODO Auto-generated method stub
-		compressor.check();
+		//compressor.check();
 	}
 
 	protected void initialize() {
