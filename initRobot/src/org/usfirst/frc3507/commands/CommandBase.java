@@ -26,9 +26,8 @@ public abstract class CommandBase extends Command {
     public static ImageProcessor ImgPro = new ImageProcessor();
     public static AutonomousAim AA = new AutonomousAim();
     
-    public static SolenoidControl SC = new SolenoidControl();
-    
-    public static SetSolenoidState SSS = new SetSolenoidState();
+    public static SolenoidControl SC;// = new SolenoidControl();
+    public static SetSolenoidState SSS;// = new SetSolenoidState();
    
     public static AxisCamera cam;
     
@@ -37,15 +36,22 @@ public abstract class CommandBase extends Command {
     public static ShooterWheels sh1= new ShooterWheels();
     public static SetShooterSpeed setShooterSpeed = new SetShooterSpeed();
     
-    public static SetCompressorState scs = new SetCompressorState();
+    // pnumatics will no longer be one the robot
+    public static ReloaderCompressor compressor;// = new ReloaderCompressor();
+    public static SetCompressorState scs;// = new SetCompressorState();
     
-    public static ReloaderCompressor compressor = new ReloaderCompressor();
+    
+    public static DiskReloadMotor DRM = new DiskReloadMotor();
+    public static DiskReloadControl DRC = new DiskReloadControl();
+    
     public static ShooterAngler shooterAngler = new ShooterAngler();
     public static ShooterAngleState shooterAnglerState = new ShooterAngleState();
     public static Wheel[] wheelSet = {new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[0],0),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[1],1),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[2],2),
         new Wheel(RobotMap.wheelSetSlot,RobotMap.wheelSetChannel[3],3)};
+    
+    public static int autoTurn = 0;
 
 
 

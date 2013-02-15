@@ -61,8 +61,9 @@ public class RobotMap {
     	hookMotorSlot = 1,
     	hookLimitSlot = 1,
     	comSwitchSlot = 1,
-    	compressorSlot = 0,
+    	compressorSlot = 1,
     	shooterAngleSlot = 1,
+    	ReloadSlot = 1,
     	
     //channels
     	pneumaticChannel1 = 1,
@@ -71,22 +72,28 @@ public class RobotMap {
     	hook2MotorChannel = 8,
     	hook1LimitChannel = 1,
     	hook2LimitChannel = 2,
-    	comSwitchChannel = 7,
+    	comSwitchChannel = 10,
     	compressorChannel = 8,
     	shooterAngleChannel1 = 9,
     	shooterAngleChannel2 = 10,
+    	ReloadRelayChannel1 = 3,
+    	ReloadRelayChannel2 = 4,
+    	ReloadChannel = 5,
     //buttons
     	cameraTestingButton = 2,
     	pneumaticButton1 = 4,
     	pneumaticButton2 = 5,
+    	reloadButton = 4,
     	shooterAngleButtonUp = 3,
     	shooterAngleButtonDown = 2,
+    	shooterAngleAutoButton = 6,
     
     //controller numbers
     	cameraTestingController = 2,
     	HookController = 4,
     	pneumaticController = 2,
     	shooterAngleController = 3,
+    	reloadController = 2,
     	
     //Shooter Spike/Relay on joystick button
     	shooterJoystick = 3,
@@ -98,7 +105,10 @@ public class RobotMap {
     
     //Shooter Angle Speed
     public static double speed = .5;
-    	
+
+	public static double errorMargin = 1.5;
+
+
     	
     /*
      * wheel numbers
@@ -111,6 +121,10 @@ public class RobotMap {
      *
      */
      public static final double
+     		DiskReloadSpeed = 0.5,
              wheelSpeedEdit = 1.0;
+
+
+
 
 }

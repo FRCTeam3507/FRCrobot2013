@@ -1,11 +1,14 @@
 package org.usfirst.frc3507.commands;
 
+import org.usfirst.frc3507.RobotMap;
+
 import edu.wpi.first.wpilibj.command.Command;
 
-public class SetCompressorState extends CommandBase {
+public class DiskReloadControl extends CommandBase {
 	
-	public SetCompressorState(){
-		requires(compressor);
+	public DiskReloadControl(){
+		requires(DRM);
+		
 	}
 
 	protected void end() {
@@ -15,7 +18,8 @@ public class SetCompressorState extends CommandBase {
 
 	protected void execute() {
 		// TODO Auto-generated method stub
-		compressor.check();
+		DRM.setState(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton));
+		
 	}
 
 	protected void initialize() {

@@ -14,7 +14,7 @@ public class ImageProcessor extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-        setDefaultCommand(CommandBase.AA);
+        //setDefaultCommand(CommandBase.AA);
     }
     public void setSpeed(double speed){
 

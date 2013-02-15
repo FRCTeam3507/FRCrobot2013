@@ -28,7 +28,7 @@ public class AutonomousAim extends CommandBase {
         //requires(wheelSet[1]);
         //requires(wheelSet[2]);
         //requires(wheelSet[3]);
-        requires(ImgPro);
+        //requires(ImgPro);
     }
 
     // Called just before this Command runs the first time
