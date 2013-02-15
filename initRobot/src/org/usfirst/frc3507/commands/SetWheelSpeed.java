@@ -135,7 +135,7 @@ public class SetWheelSpeed extends CommandBase {
            rotation*RobotMap.wheelSpeedEdit,-rotation*RobotMap.wheelSpeedEdit,rotation*RobotMap.wheelSpeedEdit,-rotation*RobotMap.wheelSpeedEdit
         };
         
-        if(rotation != 0) for(int i = 0; i < 4; i++){ wheelSet[i].setSpeed(0); }
+        if(rotation != 0) for(int i = 0; i < 4; i++){ wheelSet[i].setSpeed(speeds[i]); }
         else for(int i = 0; i < 4; i++){ wheelSet[i].setSpeed(0); }
 	}
 
