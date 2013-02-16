@@ -19,7 +19,7 @@ public class DiskReloadControl extends CommandBase {
 	protected void execute() {
 		// TODO Auto-generated method stub
 		//DRM.setState(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton));
-		DRM.setStuff(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton) != oi.getButton(RobotMap.reloadController, RobotMap.reloadButton+1) 
+		DRM.setStuff(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton) != oi.getButton(RobotMap.reloadController, RobotMap.reloadButton2) 
 					? oi.getButton(RobotMap.reloadController, RobotMap.reloadButton) 
 						? 0.1 : -0.1 
 								: 0);

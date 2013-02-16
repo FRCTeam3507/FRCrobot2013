@@ -87,6 +87,7 @@ public class RobotMap {
     	pneumaticButton1 = 4,
     	pneumaticButton2 = 5,
     	reloadButton = 4,
+    	reloadButton2 = 5,
     	shooterAngleButtonUp = 3,
     	shooterAngleButtonDown = 2,
     	shooterAngleAutoButton = 6,
