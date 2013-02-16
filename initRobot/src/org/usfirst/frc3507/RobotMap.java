@@ -64,6 +64,7 @@ public class RobotMap {
     	compressorSlot = 1,
     	shooterAngleSlot = 1,
     	ReloadSlot = 1,
+    	shooterSlot = 1,
     	
     //channels
     	pneumaticChannel1 = 1,
@@ -78,6 +79,8 @@ public class RobotMap {
     	shooterAngleChannel2 = 10,
     	ReloadRelayChannel1 = 3,
     	ReloadRelayChannel2 = 4,
+    	shooter1RelayChannel = 6,
+    	shooter2RelayChannel = 7,
     	ReloadChannel = 5,
     //buttons
     	cameraTestingButton = 2,
@@ -87,6 +90,8 @@ public class RobotMap {
     	shooterAngleButtonUp = 3,
     	shooterAngleButtonDown = 2,
     	shooterAngleAutoButton = 6,
+   		shootersForwardButton = 4,
+       	shootersReverseButton = 3,
     
     //controller numbers
     	cameraTestingController = 2,
@@ -94,14 +99,10 @@ public class RobotMap {
     	pneumaticController = 2,
     	shooterAngleController = 3,
     	reloadController = 2,
+    	shooterController = 3;
     	
-    //Shooter Spike/Relay on joystick button
-    	shooterJoystick = 3,
-    	shootersForwardButton = 4,
-    	shootersReverseButton = 3,
-    	shooter1RelayChannel = 6,
-    	shooter2RelayChannel = 7,
-    	shooterSlot = 1;
+    	
+    	
     
     //Shooter Angle Speed
     public static double speed = .1;
