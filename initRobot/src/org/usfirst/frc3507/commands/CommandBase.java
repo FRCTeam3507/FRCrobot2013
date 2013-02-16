@@ -31,8 +31,8 @@ public abstract class CommandBase extends Command {
    
     public static AxisCamera cam;
     
-    public static HookMotors hookMotors = new HookMotors();
-    public static SetHookSpeed setHookSpeed = new SetHookSpeed();
+    public static HookMotors hookMotors;// = new HookMotors();
+    public static SetHookSpeed setHookSpeed;// = new SetHookSpeed();
     public static ShooterWheels sh1= new ShooterWheels();
     public static SetShooterSpeed setShooterSpeed = new SetShooterSpeed();
     

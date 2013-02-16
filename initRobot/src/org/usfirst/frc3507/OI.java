@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
     // Create the joysticks
-
+ 
   //  public static AxisCamera cam;
 
     Joystick leftDriveJoy = new Joystick(1);

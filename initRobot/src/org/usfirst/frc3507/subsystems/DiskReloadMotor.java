@@ -54,5 +54,9 @@ public class DiskReloadMotor extends Subsystem {
 			
 		}
 	}
+	
+	public void setStuff(double a){
+		motor.set(a);
+	}
 
 }

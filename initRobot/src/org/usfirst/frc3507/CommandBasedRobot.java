@@ -9,7 +9,10 @@ package org.usfirst.frc3507;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+
+import org.usfirst.frc3507.commands.AutonomousCommands;
 import org.usfirst.frc3507.commands.CommandBase;
 
 /**
@@ -21,7 +24,7 @@ import org.usfirst.frc3507.commands.CommandBase;
  */
 public class CommandBasedRobot extends IterativeRobot {
 
-    //Command autonomousCommand;
+    Command autonomousCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -33,11 +36,12 @@ public class CommandBasedRobot extends IterativeRobot {
 
         // Initialize all subsystems
         CommandBase.init();
+        autonomousCommand = new AutonomousCommands();
     }
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-      //  autonomousCommand.start();
+        autonomousCommand.start();
     }
 
     /**

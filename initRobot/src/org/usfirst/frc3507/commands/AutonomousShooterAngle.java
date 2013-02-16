@@ -3,19 +3,25 @@ package org.usfirst.frc3507.commands;
 import org.usfirst.frc3507.RobotMap;
 
 import edu.wpi.first.wpilibj.camera.AxisCameraException;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.image.BinaryImage;
 import edu.wpi.first.wpilibj.image.ColorImage;
 import edu.wpi.first.wpilibj.image.CriteriaCollection;
-import edu.wpi.first.wpilibj.image.NIVision.MeasurementType;
 import edu.wpi.first.wpilibj.image.NIVisionException;
 import edu.wpi.first.wpilibj.image.ParticleAnalysisReport;
+import edu.wpi.first.wpilibj.image.NIVision.MeasurementType;
 
-import java.lang.Math;
+public class AutonomousShooterAngle extends CommandBase {
 
-public class ShooterAngleState extends CommandBase {
-	
 	CriteriaCollection cc;
-	public ShooterAngleState(){
+	public boolean done = false;
+	private boolean stopped1 = false;
+	private boolean stopped2 = false;
+	public AutonomousShooterAngle(){
+		requires(wheelSet[0]);
+        requires(wheelSet[1]);
+        requires(wheelSet[2]);
+        requires(wheelSet[3]);
 		requires(shooterAngler);
 		cc = new CriteriaCollection();      // create the criteria for the particle filter
         cc.addCriteria(MeasurementType.IMAQ_MT_AREA, 500, 65535, false);
@@ -23,28 +29,14 @@ public class ShooterAngleState extends CommandBase {
 
 	protected void end() {
 		// TODO Auto-generated method stub
+		turnStop();
+		stopMove();
 
 	}
 	protected void execute() {
 
-		if(oi.getButton(RobotMap.shooterAngleController, RobotMap.shooterAngleAutoButton)){
-			autonomous();
-		}
-		else{
-			boolean buttonUp = oi.getButton(RobotMap.shooterAngleController, RobotMap.shooterAngleButtonUp);
-			boolean buttonDown = oi.getButton(RobotMap.shooterAngleController, RobotMap.shooterAngleButtonDown);
-			if(buttonUp != buttonDown){
-				if(buttonUp)
-					moveUp();
-			
-				else
-					moveDown();
-				
-			}
-			else
-				stopMove();
-			
-		}
+		autonomous();
+
 		
 		// TODO Auto-generated method stub
 
@@ -59,19 +51,47 @@ public class ShooterAngleState extends CommandBase {
 	}
 	protected boolean isFinished() {
 		// TODO Auto-generated method stub
-		return false;
+		return done;
 	}
 	
 	public void moveUp(){
-		shooterAngler.setSpeed(RobotMap.speed);
+		
+		stopped1 = shooterAngler.setSpeed(RobotMap.speed);
 	}
 	
 	public void moveDown(){
-		shooterAngler.setSpeed(-RobotMap.speed);
+		
+		stopped1 = shooterAngler.setSpeed(-RobotMap.speed);
 	}
 	
 	public void stopMove(){
-		shooterAngler.setSpeed(0);
+		
+		stopped1 = shooterAngler.setSpeed(0);
+	}
+	
+	public void turnLeft(){
+		double [] speeds = new double[]{RobotMap.wheelSpeedEdit,-RobotMap.wheelSpeedEdit,RobotMap.wheelSpeedEdit,-RobotMap.wheelSpeedEdit};
+		
+		for(int i = 0; i < 4; i++){ 
+			wheelSet[i].setSpeed(speeds[i]); 
+		}
+		stopped2 = false;
+	}
+	
+	public void turnRight(){
+		double[] speeds = new double[]{-RobotMap.wheelSpeedEdit,RobotMap.wheelSpeedEdit,-RobotMap.wheelSpeedEdit,RobotMap.wheelSpeedEdit};
+		        
+		for(int i = 0; i < 4; i++){ 
+			wheelSet[i].setSpeed(speeds[i]); 
+		}
+		stopped2 = false;
+	}
+	
+	public void turnStop(){
+		for(int i = 0; i < 4; i++){ 
+			wheelSet[i].setSpeed(0); 
+		}
+		stopped1 = true;
 	}
 
 
@@ -101,6 +121,10 @@ public class ShooterAngleState extends CommandBase {
             double[] minMid = new double[0];
             
             //calculate closest rectangle
+            if(par.length == 0){
+            	done = true;
+            	return;
+            }
             for(int i = 0; i < par.length; i++){
             	ParticleAnalysisReport p = par[i];
             	double[] mid = new double[]{p.boundingRectLeft + p.boundingRectWidth/2.0, p.boundingRectTop + p.boundingRectHeight/2.0};
@@ -115,11 +139,18 @@ public class ShooterAngleState extends CommandBase {
             	if(minMid[1] > target[1] + RobotMap.errorMargin) moveDown();
             	else if(minMid[1] < target[1] - RobotMap.errorMargin) moveUp();
             	else stopMove();
-            	if(minMid[0] > target[0] + RobotMap.errorMargin) autoTurn = 1;
-            	else if(minMid[0] < target[0] - RobotMap.errorMargin) autoTurn = -1;
-            	else autoTurn = 0;
+            	if(minMid[0] > target[0] + RobotMap.errorMargin) turnRight();
+            	else if(minMid[0] < target[0] - RobotMap.errorMargin) turnLeft();
+            	else turnStop();
+            	if(stopped1 && stopped2){
+            		done = true;
+            		return;
+            	}
             }
-            else stopMove();
+            else{
+            	done = true;
+        		return;
+            }
             
             
             filteredImage.free();
@@ -135,8 +166,5 @@ public class ShooterAngleState extends CommandBase {
         	ace.printStackTrace();
         }
     }
-	    
-
-	 
 
 }

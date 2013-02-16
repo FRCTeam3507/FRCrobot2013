@@ -99,12 +99,12 @@ public class RobotMap {
     	shooterJoystick = 3,
     	shootersForwardButton = 4,
     	shootersReverseButton = 3,
-    	shooter1RelayChannel = 5,
-    	shooter2RelayChannel = 6,
+    	shooter1RelayChannel = 6,
+    	shooter2RelayChannel = 7,
     	shooterSlot = 1;
     
     //Shooter Angle Speed
-    public static double speed = .5;
+    public static double speed = .1;
 
 	public static double errorMargin = 1.5;
 
@@ -123,6 +123,8 @@ public class RobotMap {
      public static final double
      		DiskReloadSpeed = 0.5,
              wheelSpeedEdit = 1.0;
+
+	public static final int shooterAngleLimitChannel = 2;
 
 
 

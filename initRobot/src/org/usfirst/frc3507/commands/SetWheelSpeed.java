@@ -21,7 +21,7 @@ public class SetWheelSpeed extends CommandBase {
         requires(wheelSet[1]);
         requires(wheelSet[2]);
         requires(wheelSet[3]);
-        requires(ImgPro);
+        //requires(ImgPro);
         ch = i;
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
