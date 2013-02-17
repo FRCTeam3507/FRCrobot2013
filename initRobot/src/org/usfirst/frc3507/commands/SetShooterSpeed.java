@@ -21,7 +21,7 @@ public class SetShooterSpeed extends CommandBase {
 		// TODO Auto-generated method stub
 		boolean A = oi.getButton(RobotMap.shooterController,RobotMap.shootersForwardButton);
 		boolean B = oi.getButton(RobotMap.shooterController,RobotMap.shootersReverseButton);
-		sh1.setSpeed(A!=B ? A ? 1 : -1 : 0);
+		sh1.setSpeed(A!=B ? A ? RobotMap.shooterSpeed : -RobotMap.shooterSpeed : 0);
 
 	}
 

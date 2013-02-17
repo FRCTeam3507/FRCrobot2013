@@ -91,24 +91,27 @@ public class RobotMap {
     	shooterAngleButtonUp = 3,
     	shooterAngleButtonDown = 2,
     	shooterAngleAutoButton = 6,
-   		shootersForwardButton = 4,
-       	shootersReverseButton = 3,
+   		shootersForwardButton = 5,
+       	shootersReverseButton = 6,
     
     //controller numbers
     	cameraTestingController = 2,
     	HookController = 4,
     	pneumaticController = 2,
     	shooterAngleController = 3,
-    	reloadController = 2,
-    	shooterController = 3;
+    	reloadController = 4,
+    	shooterController = 4;
     	
     	
     	
     
     //Shooter Angle Speed
-    public static double speed = .1;
+    public static double speed = .5,
+    		lowerSpeed = -.24,
+    		shooterSpeed = 0.75;
 
 	public static double errorMargin = 1.5;
+
 
 
     	
@@ -123,10 +126,11 @@ public class RobotMap {
      *
      */
      public static final double
-     		DiskReloadSpeed = 0.5,
+     		DiskReloadSpeed = 0.15,
              wheelSpeedEdit = 1.0;
 
 	public static final int shooterAngleLimitChannel = 2;
+
 
 
 

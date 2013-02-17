@@ -61,7 +61,7 @@ public class AutonomousShooterAngle extends CommandBase {
 	
 	public void moveDown(){
 		
-		stopped1 = shooterAngler.setSpeed(-RobotMap.speed);
+		stopped1 = shooterAngler.setSpeed(RobotMap.lowerSpeed);
 	}
 	
 	public void stopMove(){

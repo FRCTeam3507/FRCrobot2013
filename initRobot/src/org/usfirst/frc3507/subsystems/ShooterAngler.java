@@ -27,7 +27,7 @@ public class ShooterAngler extends Subsystem{
 	//returns true if stopped
 	public boolean setSpeed(double s){
 		System.out.println(limit.get());
-		if(limit.get() && s < 0){
+		if(!limit.get() && s > 0){
 			motor1.set(0);
 			motor2.set(0);
 			return true;

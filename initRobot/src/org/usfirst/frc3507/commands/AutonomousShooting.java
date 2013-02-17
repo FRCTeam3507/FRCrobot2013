@@ -66,11 +66,11 @@ public class AutonomousShooting extends CommandBase {
 		}
 	}
 	public void load(){
-		DRM.setStuff(-0.1);
+		DRM.setStuff(-RobotMap.DiskReloadSpeed );
 	}
 	
 	public void shoot(){
-		DRM.setStuff(0.1);
+		DRM.setStuff(RobotMap.DiskReloadSpeed );
 	}
 	
 	public void stop(){
@@ -79,7 +79,7 @@ public class AutonomousShooting extends CommandBase {
 
 	protected void initialize() {
 		// TODO Auto-generated method stub
-		sh1.setSpeed(1);
+		sh1.setSpeed(RobotMap.shooterSpeed);
 	}
 
 	protected void interrupted() {

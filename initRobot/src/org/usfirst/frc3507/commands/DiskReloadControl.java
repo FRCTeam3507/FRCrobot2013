@@ -21,7 +21,7 @@ public class DiskReloadControl extends CommandBase {
 		//DRM.setState(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton));
 		DRM.setStuff(oi.getButton(RobotMap.reloadController, RobotMap.reloadButton) != oi.getButton(RobotMap.reloadController, RobotMap.reloadButton2) 
 					? oi.getButton(RobotMap.reloadController, RobotMap.reloadButton) 
-						? 0.1 : -0.1 
+						? RobotMap.DiskReloadSpeed  : -RobotMap.DiskReloadSpeed 
 								: 0);
 		
 	}

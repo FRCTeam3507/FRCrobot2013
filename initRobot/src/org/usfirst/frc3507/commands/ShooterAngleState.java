@@ -67,7 +67,7 @@ public class ShooterAngleState extends CommandBase {
 	}
 	
 	public void moveDown(){
-		shooterAngler.setSpeed(-RobotMap.speed);
+		shooterAngler.setSpeed(RobotMap.lowerSpeed);
 	}
 	
 	public void stopMove(){
